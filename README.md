@@ -91,3 +91,15 @@ https://gist.github.com/hostberg/4daa4a8c957473b52c8b0fffb1c79c2a/raw
 # gcloud --quiet compute firewall-rules delete default-puma-server
 # gcloud --quiet compute firewall-rules create default-puma-server --allow tcp:9292 --target-tags puma-server
 ```
+
+## Homework 6 (Packer base)
+
+#### Самостоятельное задание
+
+В рамках дополнительного задания некоторые параметры (_project_id_ и _source_image_family_) были вынесены в отдельный файл `variables.json` и добавлены дополнительные параметры (_image_description_,_disk_size_,_disk_type_,_network_ и _tags_) Google Compute Builder'а.
+
+#### Задание со *
+
+* Создан дополнительный шаблон `immutable.json`;
+* Дополнительные файлы (`mongodb-org-3.2.list` и `puma.service`) размещены в директории `packer/files`;
+* В `config-scripts` созданы дополнительный скрипты (`create-reddit-vm.sh` и `check-reddit-vm.sh`) для создания и проверки инстанса из image'а _reddit-full_.
