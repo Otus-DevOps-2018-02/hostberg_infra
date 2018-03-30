@@ -1,0 +1,23 @@
+[Unit]
+Description=Puma HTTP Server
+After=network.target
+
+[Service]
+# Foreground process (do not use --daemon in ExecStart or config.rb)
+Type=simple
+
+# Preferably configure a non-privileged user
+User=appuser
+
+# The path to the puma application root
+WorkingDirectory=/home/appuser/reddit
+
+# Helpful for debugging socket activation, etc.
+# Environment=PUMA_DEBUG=1
+
+ExecStart=/usr/local/bin/puma -b tcp://0.0.0.0:9292
+
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
