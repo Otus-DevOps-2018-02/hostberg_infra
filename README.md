@@ -103,3 +103,22 @@ https://gist.github.com/hostberg/4daa4a8c957473b52c8b0fffb1c79c2a/raw
 * Создан дополнительный шаблон `immutable.json`;
 * Дополнительные файлы (`mongodb-org-3.2.list` и `puma.service`) размещены в директории `packer/files`;
 * В `config-scripts` созданы дополнительный скрипты (`create-reddit-vm.sh` и `check-reddit-vm.sh`) для создания и проверки инстанса из image'а _reddit-full_.
+
+## Homework 7 (Trraform 1)
+
+#### Самостоятельное задание
+
+* Определена переменная private_key_path;
+* Определена переменна zone с дефолтным значением
+* Все конфиги отформатированы с помощью [vscode-terraform](https://github.com/mauve/vscode-terraform/);
+* Создан шаблон конфига terraform.tfvars.example.
+
+#### Задание со *
+
+Добавление ключей в проект можно организовать с помощью `google_compute_project_metadata` и `google_compute_project_metadata_item`. Примеры реализации находятся в файле `metadata.tf.example`. В процессе добавления ключей проблем обнаружено не было, но стоит обратить внимание на то, что изменения внесенные через web-интерфейс (_appuser_web_) после `terraform apply` будут утеряны.
+
+#### Задание с **
+
+* В конфиге `lb.tf` описан балансировщик для создаваемых инстансов;
+* Количество инстансов определяется в переменной `count`;
+* Создано 2 _output_ переменные (`app_external_ip` и `lb_external_ip`).
