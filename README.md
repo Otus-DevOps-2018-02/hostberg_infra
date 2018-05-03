@@ -104,7 +104,7 @@ https://gist.github.com/hostberg/4daa4a8c957473b52c8b0fffb1c79c2a/raw
 * Дополнительные файлы (`mongodb-org-3.2.list` и `puma.service`) размещены в директории `packer/files`;
 * В `config-scripts` созданы дополнительный скрипты (`create-reddit-vm.sh` и `check-reddit-vm.sh`) для создания и проверки инстанса из image'а _reddit-full_.
 
-## Homework 7 (Trraform 1)
+## Homework 7 (Terraform 1)
 
 #### Самостоятельное задание
 
@@ -123,7 +123,7 @@ https://gist.github.com/hostberg/4daa4a8c957473b52c8b0fffb1c79c2a/raw
 * Количество инстансов определяется в переменной `count`;
 * Создано 2 _output_ переменные (`app_external_ip` и `lb_external_ip`).
 
-## Homework 8 (Trraform 2)
+## Homework 8 (Terraform 2)
 
 #### Самостоятельное задание
 
@@ -134,3 +134,13 @@ https://gist.github.com/hostberg/4daa4a8c957473b52c8b0fffb1c79c2a/raw
 
 * Настроено хранение _terraform state'а_ в удаленном GSC бэкенде, проверена работа блокировок;
 * В `app` модуль добавлен _provisioner_ для деплоя приложения, с опциональной возможностью отключения.
+
+## Homework 9 (Ansible 1)
+
+#### Самостоятельное задание
+
+* Протестирована работа модуля `git`. Для принудительной перезапизи измененных файлов необходимо использовать параметр `force` (по-умолчанию имеет значение _no_).
+
+#### Задание со *
+
+* Создан скрипт `inventory.py` (передает содержимое `inventory.json`) для тестирования динамического inventory.
