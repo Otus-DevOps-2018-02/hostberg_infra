@@ -144,3 +144,13 @@ https://gist.github.com/hostberg/4daa4a8c957473b52c8b0fffb1c79c2a/raw
 #### Задание со *
 
 * Создан скрипт `inventory.py` (передает содержимое `inventory.json`) для тестирования динамического inventory.
+
+## Homework 10 (Ansible 2)
+
+#### Самостоятельное задание
+
+* Обновлены образы _packer'а_, добавлен провижининг `ansible` и тестирование образов с помощью `serverspec`.
+
+#### Задание со *
+
+* На базе `terraform-inventory` реализовано использование динамического inventory.
