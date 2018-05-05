@@ -6,32 +6,32 @@ env:
   - PACKER="1.2.3"
   - TERRAFORM="0.11.7"
   - TFLINT="0.5.4"
+
 before_install:
 - curl https://raw.githubusercontent.com/express42/otus-homeworks/2018-02/run.sh | bash
+
 before_script:
 - if ! packer version ; then
-    wget -q -O packer.zip https://releases.hashicorp.com/packer/${PACKER}/packer_${PACKER}_linux_amd64.zip
-    unzip packer.zip -d /usr/local/bin/ && rm packer.zip
-    packer version
+    wget -q -O packer.zip https://releases.hashicorp.com/packer/${PACKER}/packer_${PACKER}_linux_amd64.zip;
+    sudo unzip packer.zip -d /usr/local/bin/ && rm packer.zip;
+    packer version;
   fi
-
 - if ! terraform version ; then
-    wget -q -O terraform.zip https://releases.hashicorp.com/terraform/${TERRAFORM}/terraform_${TERRAFORM}_linux_amd64.zip
-    unzip terraform.zip -d /usr/local/bin/ && rm terraform.zip
-    terraform version
+    wget -q -O terraform.zip https://releases.hashicorp.com/terraform/${TERRAFORM}/terraform_${TERRAFORM}_linux_amd64.zip;
+    sudo unzip terraform.zip -d /usr/local/bin/ && rm terraform.zip;
+    terraform version;
   fi
-
 - if ! tflint --version ; then
-    wget -q -O tflint.zip https://github.com/wata727/tflint/releases/download/v${TFLINT}/tflint_linux_amd64.zip
-    unzip tflint.zip -d /usr/local/bin/ && rm tflint.zip
-    tflint --version
+    wget -q -O tflint.zip https://github.com/wata727/tflint/releases/download/v${TFLINT}/tflint_linux_amd64.zip;
+    sudo unzip tflint.zip -d /usr/local/bin/ && rm tflint.zip;
+    tflint --version;
   fi
-
 - if ! ansible-lint --version ; then
-    echo 'Oh no!'
-    pip -q install ansible-lint
-    ansible-lint --version
+    sudo pip -q install ansible-lint;
+    ansible-lint --version;
   fi
+- touch ~/.ssh/appuser.pub
+- touch ~/.ssh/appuser
 
 script:
 - packer validate -var-file=packer/variables.json.example packer/app.json
