@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/hostberg/hostberg_infra_trytravis.svg?branch=ansible-3)](https://travis-ci.org/hostberg/hostberg_infra_trytravis)
+[![Build Status](https://travis-ci.org/Otus-DevOps-2018-02/hostberg_infra.svg?branch=master)](https://travis-ci.org/Otus-DevOps-2018-02/hostberg_infra)
 
 # hostberg_infra
 hostberg Infra repository
