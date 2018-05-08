@@ -9,5 +9,5 @@ describe service("mongod") do
 end
 
 describe port(27017) do
-  it { should be_listening.on("0.0.0.0").with("tcp") }
+  it { should be_listening.on("127.0.0.1").with("tcp") }
 end
