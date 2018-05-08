@@ -171,3 +171,16 @@ https://gist.github.com/hostberg/4daa4a8c957473b52c8b0fffb1c79c2a/raw
 
 * Настроен TravisCI для тестов на базе `packer`, `terraform`, `tflint` и `ansible-lint`;
 * Для отладки использовался `trytravis`.
+
+## Homework 12 (Ansible 4)
+
+#### Самостоятельное задание
+
+* Для роли `db` добавлен тест `host.socket`, актуализированы `packer_db.yml` и `packer_db.yml`.
+
+#### Задание со *
+
+* В `Vagrantfile` добавлены переменные для корректной работы роли `jdauphant.nginx`;
+* Роль `db` вынесена в отдельный репозиторий [hostberg_infra_db](https://github.com/hostberg/hostberg_infra_db);
+* Для роли `db` сконфигиурровано тестирование через _Travis/Molecule/GCE_;
+* Настроено отображение статуса билда в репо и уведомление в slack.
