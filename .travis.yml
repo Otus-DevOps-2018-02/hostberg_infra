@@ -10,7 +10,7 @@ env:
 before_install:
 - curl https://raw.githubusercontent.com/express42/otus-homeworks/2018-02/run.sh | bash
 
-before_script:
+install:
 - if ! packer version ; then
     wget -q -O packer.zip https://releases.hashicorp.com/packer/${PACKER}/packer_${PACKER}_linux_amd64.zip;
     sudo unzip packer.zip -d /usr/local/bin/ && rm packer.zip;
@@ -30,6 +30,8 @@ before_script:
     sudo pip -q install ansible-lint;
     ansible-lint --version;
   fi
+
+before_script:
 - touch ~/.ssh/appuser.pub
 - touch ~/.ssh/appuser
 
