@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Otus-DevOps-2018-02/hostberg_infra.svg?branch=master)](https://travis-ci.org/Otus-DevOps-2018-02/hostberg_infra)
+
 # hostberg_infra
 hostberg Infra repository
 
@@ -154,3 +156,18 @@ https://gist.github.com/hostberg/4daa4a8c957473b52c8b0fffb1c79c2a/raw
 #### Задание со *
 
 * На базе `terraform-inventory` реализовано использование динамического inventory.
+
+## Homework 11 (Ansible 3)
+
+#### Самостоятельное задание
+
+* Роль `jdauphant.nginx` добавлена в `app.yml`, для инстансов `app` в _terraform'е_ добавлен _tag_ `http-server`.
+
+#### Задание со *
+
+* Работа с динамическим inventory реализована через скрипты `inventory.sh` (обвязка вокруг `terraform-inventory`).
+
+#### Задание с **
+
+* Настроен TravisCI для тестов на базе `packer`, `terraform`, `tflint` и `ansible-lint`;
+* Для отладки использовался `trytravis`.
